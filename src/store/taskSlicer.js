@@ -26,7 +26,6 @@ const taskSlice = createSlice({
     },
     getTasksFromLS: (state, action) => {
       state.tasks = localStorage.getItem("tasks");
-<<<<<<< HEAD
     },
     createNewTask: (state, action) => {
       const randomId = Math.random().toString(36).substring(2, 10);
@@ -41,13 +40,10 @@ const taskSlice = createSlice({
       state.tasks = state.tasks.map((task) =>
         task.id === action.payload.id ? { ...task, ...action.payload } : task,
       );
-=======
->>>>>>> c6b6ac56de78458f8a94f9d88e607861428c63c7
     },
   },
 });
 
-<<<<<<< HEAD
 export const {
   toggleCompleted,
   getTasksFromLS,
@@ -55,8 +51,5 @@ export const {
   deleteTask,
   editTask,
 } = taskSlice.actions;
-=======
-export const { toggleCompleted, getTasksFromLS } = taskSlice.actions;
->>>>>>> c6b6ac56de78458f8a94f9d88e607861428c63c7
 
 export default taskSlice.reducer;
