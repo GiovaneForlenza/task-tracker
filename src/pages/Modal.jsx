@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { closeModal } from "../store/modalSlicer";
@@ -163,6 +164,14 @@ function Modal() {
           />
         </div>
       </div>
+=======
+import React from "react";
+
+function Modal() {
+  return (
+    <div className="absolute top-0 left-0 z-10 flex h-screen w-full items-center justify-center bg-gray-900/50">
+      Modal
+>>>>>>> c6b6ac56de78458f8a94f9d88e607861428c63c7
     </div>
   );
 }
