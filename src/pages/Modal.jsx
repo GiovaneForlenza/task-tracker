@@ -76,7 +76,10 @@ function Modal() {
         ) : (
           <form action="" className="flex flex-col gap-4">
             <div className="flex flex-col gap-2">
-              <label htmlFor="">Title</label>
+              <label htmlFor="">
+                Title{" "}
+                <span className="text-xs text-red-500">*required</span>{" "}
+              </label>
               <input
                 type="text"
                 value={formData.title}
@@ -115,19 +118,21 @@ function Modal() {
               </select>
             </div>
             <div
-              className="flex flex-row gap-2"
+              className="flex w-fit cursor-pointer flex-row gap-2"
               onClick={() =>
                 setFormData({ ...formData, completed: !formData.completed })
               }
             >
               <div
-                className={`flex h-6 w-6 items-center justify-center rounded-full border hover:cursor-pointer ${formData.completed ? "border-none bg-blue-500" : "border-gray-500"}`}
+                className={`flex h-6 w-6 items-center justify-center rounded-full border ${formData.completed ? "border-none bg-blue-500" : "border-gray-500"}`}
               >
                 {formData.completed && (
                   <Check size={16} className="bold font-bold text-white" />
                 )}
               </div>
-              <label htmlFor="">Completed</label>
+              <label htmlFor="" className="cursor-pointer">
+                Completed
+              </label>
             </div>
           </form>
         )}
@@ -139,6 +144,7 @@ function Modal() {
               handleClick={handleActionButtonClick}
               text={"Create Task"}
               type={"Create"}
+              taskTitle={formData.title}
             />
           )}
           {modalType === "Edit" && (
@@ -146,6 +152,7 @@ function Modal() {
               handleClick={handleActionButtonClick}
               text={"Save Task"}
               type={"Save"}
+              taskTitle={formData.title}
             />
           )}
           {modalType === "Delete" && (
