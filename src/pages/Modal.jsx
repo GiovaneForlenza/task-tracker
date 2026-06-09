@@ -60,9 +60,9 @@ function Modal() {
   }
 
   return (
-    <div className="absolute top-0 left-0 flex h-full w-full items-center justify-center py-5 md:min-w-100">
+    <div className="absolute top-0 left-0 flex h-screen w-full items-center justify-center py-5 md:min-w-100">
       <div
-        className="h-[5000px] w-full items-center justify-center bg-gray-900/50"
+        className="h-screen w-full items-center justify-center bg-gray-900/50"
         onClick={handleOnClick}
       ></div>
       <div className="absolute mx-10 flex w-[95%] max-w-100 flex-col gap-6 rounded-md bg-white p-4 md:w-full md:rounded-xl">
