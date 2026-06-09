@@ -60,12 +60,12 @@ function Modal() {
   }
 
   return (
-    <div className="absolute top-0 left-0 flex h-screen w-full min-w-100 items-center justify-center py-5">
+    <div className="absolute top-0 left-0 flex h-screen w-full items-center justify-center py-5 md:min-w-100">
       <div
         className="h-screen w-full items-center justify-center bg-gray-900/50"
         onClick={handleOnClick}
       ></div>
-      <div className="absolute mx-10 flex w-full max-w-100 flex-col gap-6 rounded-xl bg-white p-4">
+      <div className="absolute mx-10 flex w-[95%] max-w-100 flex-col gap-6 rounded-md bg-white p-4 md:w-full md:rounded-xl">
         {modalType === "Delete" ? (
           <div className="flex flex-col items-center justify-center">
             <h2>Are you sure you want to delete "{task.title}"?</h2>
