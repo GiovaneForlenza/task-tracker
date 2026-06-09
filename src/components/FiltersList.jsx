@@ -9,7 +9,7 @@ function FiltersList() {
     dispatch(updateSelectedFilter(filter));
   }
   return (
-    <div className="flex w-full flex-row items-start justify-between gap-1 border md:gap-4">
+    <div className="flex w-full flex-row items-start justify-between gap-1 md:gap-4">
       {filters.map((filter, idx) => {
         return (
           <div
