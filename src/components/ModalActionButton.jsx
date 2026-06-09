@@ -13,7 +13,7 @@ function ModalActionButton({ type, text, handleClick, taskTitle }) {
               : "cursor-pointer border border-gray-400 bg-gray-50 text-gray-500 hover:bg-gray-100"
       } px-3 py-2 font-semibold transition-all`}
       onClick={() => handleClick(type)}
-      disabled={!taskTitle}
+      disabled={!taskTitle && type !== "Cancel" && type !== "Delete"}
     >
       {text}
     </button>

@@ -26,7 +26,6 @@ function TasksList() {
   return (
     <div className="flex w-full flex-col gap-4 rounded-xl bg-white p-3 py-4 md:px-6">
       <FiltersList />
-
       {filtered.length > 0 ? (
         filtered.map((task, idx) => (
           <div className="" key={idx}>
@@ -36,11 +35,12 @@ function TasksList() {
         ))
       ) : (
         <div className="flex items-center justify-center py-4">
-          {selectedFilter === "Completed"
-            ? "You have not completed any of your tasks yet"
-            : selectedFilter === "Incomplete"
-              ? "You have no tasks to complete, good job!"
-              : "You have no tasks"}
+          {tasks.length === 0
+            ? "You don't have any tasks"
+            : selectedFilter === "Completed"
+              ? "You have not completed any of your tasks yet"
+              : selectedFilter === "Incomplete" &&
+                "You have completed all of your tasks!"}
         </div>
       )}
     </div>
