@@ -24,7 +24,7 @@ function Header() {
           <p className="text-xs text-gray-500">{formattedDate}</p>
         </div>
         <button
-          className="md:text-md flex items-center justify-center rounded-lg bg-blue-50 px-2 text-xs font-semibold text-blue-500 transition-all hover:cursor-pointer hover:bg-blue-100 md:px-6 md:py-3"
+          className="md:text-md flex items-center justify-center rounded-lg border border-blue-500 bg-blue-50 px-2 text-xs font-semibold text-blue-500 transition-all hover:cursor-pointer hover:bg-blue-100 md:px-6 md:py-3"
           onClick={handleClick}
         >
           + Add new task
