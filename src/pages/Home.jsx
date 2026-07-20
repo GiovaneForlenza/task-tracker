@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { text } from "../store/taskSlicer";
+import { useDispatch } from "react-redux";
 
 function Home() {
+  const dispatch = useDispatch();
   useEffect(() => {
-    console.log("aaa");
-
-    text("afgawd");
+    dispatch(text("test"));
   }, []);
 
   return (

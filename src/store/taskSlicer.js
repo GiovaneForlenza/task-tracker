@@ -9,7 +9,7 @@ const taskSlice = createSlice({
   initialState,
   reducers: {
     text: (state, action) => {
-      console.log(state);
+      console.log(action.payload);
     },
   },
 });
