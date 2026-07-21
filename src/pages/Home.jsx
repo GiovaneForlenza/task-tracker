@@ -19,9 +19,7 @@ function Home() {
   return (
     <div className="flex w-full max-w-250 flex-col gap-4">
       <Header />
-      <TasksList />
-
-      {isModalOpen && <Modal />}
+      <TasksList />a{isModalOpen && <Modal />}
     </div>
   );
 }
