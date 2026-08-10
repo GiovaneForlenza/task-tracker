@@ -1,13 +1,12 @@
 import { Check, Pencil, Trash } from "lucide-react";
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { openModal } from "../store/modalSlicer";
 import { toggleCompleted } from "../store/taskSlicer";
-import { openModal, closeModal } from "../store/modalSlicer";
 
 function TaskItem({ task }) {
   const dispatch = useDispatch();
 
-  const modalType = useSelector((selector) => selector.modal.type);
+  // const modalType = useSelector((selector) => selector.modal.type);
 
   function handleClick(type) {
     dispatch(openModal({ type: type, task: task }));
