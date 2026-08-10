@@ -9,7 +9,6 @@ import Modal from "./Modal";
 function Home() {
   const dispatch = useDispatch();
   const tasks = useSelector((selector) => selector.task.tasks);
-  // const filters = useSelector((selector) => selector.filter.filter);
   const isModalOpen = useSelector((selector) => selector.modal.isOpen);
   useEffect(() => {
     dispatch(updateLS(tasks));
@@ -19,7 +18,8 @@ function Home() {
   return (
     <div className="flex w-full max-w-250 flex-col gap-4">
       <Header />
-      <TasksList />a{isModalOpen && <Modal />}
+      <TasksList />
+      {isModalOpen && <Modal />}
     </div>
   );
 }
